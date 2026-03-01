@@ -1,6 +1,6 @@
 - name: Setup server
   hosts: web
-  become: yes
+  become: true
 
   tasks:
 
