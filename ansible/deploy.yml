@@ -4,12 +4,7 @@
 
   tasks:
 
-    - name: install docker python
-      apt:
-        name: python3-docker
-        state: present
-
-    - name: create website folder
+    - name: create site folder
       file:
         path: /home/ubuntu/site
         state: directory
@@ -19,13 +14,21 @@
         src: ../website/
         dest: /home/ubuntu/site/
 
-    - name: run nginx container
-      docker_container:
-        name: resume-site
-        image: nginx
-        state: started
-        restart_policy: always
-        ports:
-          - "80:80"
-        volumes:
-          - /home/ubuntu/site:/usr/share/nginx/html
+    - name: copy nginx config
+      copy:
+        src: ../docker/nginx.conf
+        dest: /home/ubuntu/nginx.conf
+
+    - name: stop old container
+      shell: docker rm -f resume-site || true
+
+    - name: run nginx with ssl
+      shell: |
+        docker run -d \
+        --name resume-site \
+        -p 80:80 \
+        -p 443:443 \
+        -v /home/ubuntu/site:/usr/share/nginx/html \
+        -v /home/ubuntu/nginx.conf:/etc/nginx/nginx.conf \
+        -v /home/ubuntu/ssl:/ssl \
+        nginx

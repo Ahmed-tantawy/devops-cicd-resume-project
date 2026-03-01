@@ -1,0 +1,27 @@
+- name: setup self signed ssl
+  hosts: web
+  become: yes
+
+  tasks:
+
+    - name: install openssl
+      apt:
+        name: openssl
+        state: present
+        update_cache: yes
+
+    - name: create ssl folder
+      file:
+        path: /home/ubuntu/ssl
+        state: directory
+
+    - name: generate key
+      shell: |
+        openssl genrsa -out /home/ubuntu/ssl/key.pem 2048
+
+    - name: generate cert
+      shell: |
+        openssl req -new -x509 -key /home/ubuntu/ssl/key.pem \
+        -out /home/ubuntu/ssl/cert.pem \
+        -days 365 \
+        -subj "/C=CZ/ST=Prague/L=Prague/O=DevOps/CN=localhost"
