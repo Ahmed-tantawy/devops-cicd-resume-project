@@ -1,3 +1,10 @@
+![CI](https://img.shields.io/badge/CI-GitHub%20Actions-blue)
+![Terraform](https://img.shields.io/badge/IaC-Terraform-purple)
+![Docker](https://img.shields.io/badge/Container-Docker-blue)
+![AWS](https://img.shields.io/badge/Cloud-AWS-orange)
+![Ansible](https://img.shields.io/badge/Config-Ansible-red)
+![Nginx](https://img.shields.io/badge/Web-Nginx-green)
+
 # DevOps CI/CD Resume Project
 
 Production-style DevOps project demonstrating a complete CI/CD pipeline using Terraform, Ansible, Docker, Nginx, AWS EC2 and GitHub Actions.
