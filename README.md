@@ -1,9 +1,10 @@
-This project demonstrates a complete DevOps pipeline using:
+## Architecture
+Developer → GitHub → GitHub Actions → Ansible → AWS EC2 → Docker → Nginx → Website
 
-- Terraform (AWS provisioning)
-- Ansible (configuration management)
-- Docker (containerization)
-- Nginx (web server)
-- GitHub Actions (CI/CD)
-- GitHub Pages (public demo)
-- AWS EC2 (deployment target)
+This project demonstrates a full CI/CD DevOps pipeline:
+
+- Terraform provisions AWS EC2
+- Ansible configures server
+- Docker runs nginx container
+- GitHub Actions deploys automatically
+- Website served from container
