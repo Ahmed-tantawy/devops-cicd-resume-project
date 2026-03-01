@@ -1,2 +1,17 @@
-terraform/devops-key.pub
-terraform/devops-key
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.backup
+
+# keys
+*.pem
+devops-key
+devops-key.pub
+
+# mac
+.DS_Store
+
+# vscode
+.vscode/
