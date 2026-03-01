@@ -1,3 +1,4 @@
+![CI](https://github.com/Ahmed-tantawy/devops-cicd-resume-project/actions/workflows/deploy.yml/badge.svg)
 ![CI](https://img.shields.io/badge/CI-GitHub%20Actions-blue)
 ![Terraform](https://img.shields.io/badge/IaC-Terraform-purple)
 ![Docker](https://img.shields.io/badge/Container-Docker-blue)
