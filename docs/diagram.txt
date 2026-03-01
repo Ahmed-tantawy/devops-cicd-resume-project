@@ -1,0 +1,19 @@
+GitHub
+  │
+  ▼
+GitHub Actions
+  │
+  ▼
+Terraform → AWS EC2
+  │
+  ▼
+Ansible
+  │
+  ▼
+Docker
+  │
+  ▼
+Nginx
+  │
+  ▼
+Resume Website
