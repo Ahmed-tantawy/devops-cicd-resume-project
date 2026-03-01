@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: gray;
+    margin-top: 5px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.job {
+    margin-bottom: 10px;
+}
